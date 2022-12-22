@@ -10,7 +10,7 @@ Let's imagine our app contains a movie database. We'd like to add a part to sele
 module Spina
   module Parts
     class Movie < Base
-      attr_json :movie_id, :integer
+      attr_json :movie_id, :string
 
       def content
         Movie.find_by(id: movie_id)
