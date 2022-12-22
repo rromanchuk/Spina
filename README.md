@@ -7,6 +7,11 @@
 [![Test Coverage](https://codeclimate.com/github/SpinaCMS/Spina/badges/coverage.svg)](https://codeclimate.com/github/SpinaCMS/Spina/coverage)
 [![Discord](https://img.shields.io/discord/811903407525986304?label=Discord)](https://discord.gg/bv5Mu4XYcN)
 
+## Fork CHANGELOG
+- Single migration file with up and down on `rails spina:install`
+- PKs use `:uuid`s
+- FKs stored in jsonb `:integer` -> `:string`
+
 ## Getting Started
 [Read the guide](https://www.spinacms.com/docs) to learn more about how to use Spina. If you just want to get started, create a new Ruby on Rails app and follow these instructions:
 
