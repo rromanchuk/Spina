@@ -1,6 +1,6 @@
 class CreateSpinaNavigations < ActiveRecord::Migration[4.2]
   def change
-    create_table "spina_navigations", force: :cascade do |t|
+    create_table "spina_navigations", id: :uuid, force: :cascade do |t|
       t.string "name", null: false
       t.string "label", null: false
       t.boolean "auto_add_pages", null: false, default: false
@@ -9,9 +9,9 @@ class CreateSpinaNavigations < ActiveRecord::Migration[4.2]
       t.index ["name"], name: "index_spina_navigations_on_name", unique: true, using: :btree
     end
 
-    create_table "spina_navigation_items", force: :cascade do |t|
-      t.integer "page_id", null: false
-      t.integer "navigation_id", null: false
+    create_table "spina_navigation_items", id: :uuid, force: :cascade do |t|
+      t.uuid "page_id", null: false
+      t.uuid "navigation_id", null: false
       t.integer "position", default: 0, null: false
       t.string "ancestry"
       t.timestamps

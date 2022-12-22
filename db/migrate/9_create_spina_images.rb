@@ -1,7 +1,7 @@
 class CreateSpinaImages < ActiveRecord::Migration[5.2]
   def change
-    create_table :spina_images do |t|
-      t.integer :media_folder_id
+    create_table :spina_images, id: :uuid do |t|
+      t.uuid :media_folder_id
 
       t.timestamps
     end

@@ -1,7 +1,7 @@
 class CreateSpinaTranslationTables < ActiveRecord::Migration[4.2]
   def up
-    create_table "spina_page_translations", force: :cascade do |t|
-      t.integer "spina_page_id", null: false
+    create_table "spina_page_translations", id: :uuid, force: :cascade do |t|
+      t.uuid "spina_page_id", null: false
       t.string "locale", null: false
       t.string "title"
       t.string "menu_title"
@@ -14,8 +14,8 @@ class CreateSpinaTranslationTables < ActiveRecord::Migration[4.2]
       t.index ["spina_page_id"], name: "index_spina_page_translations_on_spina_page_id"
     end
 
-    create_table "spina_line_translations", force: :cascade do |t|
-      t.integer "spina_line_id", null: false
+    create_table "spina_line_translations", id: :uuid, force: :cascade do |t|
+      t.uuid "spina_line_id", null: false
       t.string "locale", null: false
       t.string "content"
       t.datetime "created_at", null: false
@@ -24,8 +24,8 @@ class CreateSpinaTranslationTables < ActiveRecord::Migration[4.2]
       t.index ["spina_line_id"], name: "index_spina_line_translations_on_spina_line_id"
     end
 
-    create_table "spina_text_translations", force: :cascade do |t|
-      t.integer "spina_text_id", null: false
+    create_table "spina_text_translations", id: :uuid, force: :cascade do |t|
+      t.uuid "spina_text_id", null: false
       t.string "locale", null: false
       t.text "content"
       t.datetime "created_at", null: false
