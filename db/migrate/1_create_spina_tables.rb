@@ -1,4 +1,4 @@
-class CreateSpinaTables < ActiveRecord::Migration[4.2]
+class CreateSpinaTables < ActiveRecord::Migration[7.0]
   def up
     enable_extension "uuid-ossp"
     
