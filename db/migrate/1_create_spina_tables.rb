@@ -1,5 +1,6 @@
 class CreateSpinaTables < ActiveRecord::Migration[4.2]
   def change
+    enable_extension "uuid-ossp"
     create_table "spina_accounts", id: :uuid, force: :cascade do |t|
       t.string "name"
       t.string "address"
